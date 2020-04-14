@@ -18,7 +18,8 @@ public class AnnotationDemoApp
         System.out.println("Volley Coach: " + volleyCoach.getDailyWorkout());
 
         //call method to get daily fortune
-        System.out.println("Daily Fortune: " + theCoach.getDailyFortune());
+        System.out.println("Daily Fortune(Tennis): " + theCoach.getDailyFortune());
+        System.out.println("Daily Fortune(Volley): " + volleyCoach.getDailyFortune());
 
         //close the context
         context.close();
