@@ -11,15 +11,15 @@ public class TennisCoach implements Coach {
     public TennisCoach() {
     }
 
-    @Autowired
-    @Qualifier("randomFortuneService")
+
+    /*@Qualifier("randomFortuneService")
     public void setFortuneService(FortuneService fortuneService) {
         this.fortuneService = fortuneService;
-    }
-
-    /*public TennisCoach(FortuneService fortuneService) {
-        this.fortuneService = fortuneService;
     }*/
+    @Autowired
+    public TennisCoach(@Qualifier("randomFortuneService") FortuneService fortuneService) {
+        this.fortuneService = fortuneService;
+    }
 
     @Override
     public String getDailyWorkout() {
