@@ -13,7 +13,7 @@ There are three ways to autowire a component:
 - By field (not recommended)
 
 If there are more than one implementation for the dependency, it should be specified by using the @Qualifier Annotation.\
-When autowire by constructor the @Qualifier Annotation should be passed as parameter. 
+When autowiring by constructor the @Qualifier Annotation should be passed as parameter. 
 
 ### Bean Lifecycle
 
@@ -23,7 +23,7 @@ To define the bean scope, just use the annotation @Scope("prototype").\
 It's not necessary to define a singleton scope as it is implicit.
 
 The hook methods are triggered by the @PostConstruct and @PreDestroy Annotations above the desired method.\
-void is the common return type used in hook methods as the return can't be captured.\
+The common return type used in hook methods is void as the return can't be captured.\
 They can have any access modifier and name, but has to be no-arg.\
 Note: @PreDestroy method is not called when using "prototype" scope.
 
