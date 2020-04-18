@@ -11,7 +11,16 @@ public class AnnotationDemoApp
 
         //get the bean from spring container
         Coach theCoach = context.getBean("thatSillyCoach", Coach.class);
+        Coach secondCoach = context.getBean("thatSillyCoach", Coach.class);
         VolleyCoach volleyCoach = context.getBean("volleyCoach", VolleyCoach.class);
+
+        boolean result = (theCoach == secondCoach);
+
+        //check if the instances are the same
+        System.out.println("The instances are the same: " + result);
+        System.out.println("Memory position for \"theCoach\": " + theCoach);
+        System.out.println("Memory position for \"secondCoach\": " + secondCoach);
+
 
         //call a method on the bean
         System.out.println("Tennis Coach: " + theCoach.getDailyWorkout());
