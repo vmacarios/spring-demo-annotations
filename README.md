@@ -15,6 +15,12 @@ There are three ways to autowire a component:
 If there are more than one implementation for the dependency, it should be specified by using the @Qualifier Annotation.\
 When autowiring by constructor the @Qualifier Annotation should be passed as parameter. 
 
+Configuring the beans without a XML file can be done by creating a java class with @Configuration annotation.
+In the same file, use the @ComponentScan(package)
+Call the application context by using AnnotationConfigApplicationContext in the main class.
+Use @PropertySource(file) if external values are required.
+
+
 ### Bean Lifecycle
 
 Container Started > Bean Instantiated > Dependencies Injected > Internal Spring Processing > Custom Init Method(Hook) > Bean Ready For Use > Custom Destroy Method(Hook) > STOP
