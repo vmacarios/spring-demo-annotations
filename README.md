@@ -16,10 +16,11 @@ If there are more than one implementation for the dependency, it should be speci
 When autowiring by constructor the @Qualifier Annotation should be passed as parameter. 
 
 Configuring the beans without a XML file can be done by creating a java class with @Configuration annotation.
-In the same file, use the @ComponentScan(package)
+In the same file, use the @ComponentScan(package)[1]
 Call the application context by using AnnotationConfigApplicationContext in the main class.
 Use @PropertySource(file) if external values are required.
-
+[1] Instead of using @ComponentScan, the beans can be explicit defined with @Bean at the config class.
+In this case, the Implementation should be instantiated, returning the Interface in this case.
 
 ### Bean Lifecycle
 

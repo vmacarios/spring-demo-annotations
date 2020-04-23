@@ -15,6 +15,7 @@ public class JavaConfigDemoApp
         Coach theCoach = context.getBean("thatSillyCoach", Coach.class);
         Coach secondCoach = context.getBean("thatSillyCoach", Coach.class);
         VolleyCoach volleyCoach = context.getBean("volleyCoach", VolleyCoach.class);
+        SwimCoach swimCoach = context.getBean("swimCoach", SwimCoach.class);
 
         boolean result = (theCoach == secondCoach);
 
@@ -27,10 +28,12 @@ public class JavaConfigDemoApp
         //call a method on the bean
         System.out.println("Tennis Coach: " + theCoach.getDailyWorkout());
         System.out.println("Volley Coach: " + volleyCoach.getDailyWorkout());
+        System.out.println("Swim Coach: " + swimCoach.getDailyWorkout());
 
         //call method to get daily fortune
         System.out.println("Daily Fortune(Tennis): " + theCoach.getDailyFortune());
         System.out.println("Daily Fortune(Volley): " + volleyCoach.getDailyFortune());
+        System.out.println("Daily Fortune(Swim): " + swimCoach.getDailyFortune());
 
         //call the values from properties files
         System.out.println("Email: " + volleyCoach.getEmail());
